@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Live poll · presenter</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+  <link rel="stylesheet" href="styles.css?v=20261027a">
+</head>
+<body class="present">
+  <header class="p-header">
+    <div class="p-title"><span id="title">Live poll</span> <span id="qnum" class="muted"></span> <span id="closed" class="pill" hidden>Voting closed</span></div>
+    <div id="join-small" class="p-join" title="Press Q for a large QR code">
+      <div><div class="muted small">Join at</div><div id="join-url" class="join-url"></div></div>
+      <img id="qr-small" alt="QR code to join the poll">
+    </div>
+  </header>
+  <main id="main" class="p-main"><div class="center muted">Connecting…</div></main>
+  <footer class="p-footer">
+    <span id="count" class="count"></span>
+    <span id="hint" class="hint">F full screen · Q QR code · H hide results<span id="admin-keys"></span></span>
+    <span id="conn" class="conn" title="Connection"></span>
+  </footer>
+  <div id="qr-overlay" class="qr-overlay" hidden>
+    <div class="qr-card">
+      <img id="qr-big" alt="QR code to join the poll">
+      <div class="join-big">Join at <b id="join-url-big"></b></div>
+    </div>
+  </div>
+  <script src="vendor/supabase.js?v=20261027a"></script>
+  <script src="vendor/qrcode.js?v=20261027a"></script>
+  <script type="module" src="present.js?v=20261027a"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+.env.local
+node_modules/
+supabase/seed.sql
+supabase/.temp/
+.DS_Store

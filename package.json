@@ -1,0 +1,21 @@
+{
+  "name": "live-poll",
+  "version": "1.0.0",
+  "description": "Lightweight Menti-style live polling: GitHub Pages + Supabase",
+  "scripts": {
+    "serve": "python3 -m http.server 8080 --bind 127.0.0.1 --directory site",
+    "test": "node --env-file=.env.local scripts/smoke-test.mjs",
+    "load-test": "node --env-file=.env.local scripts/load-test.mjs",
+    "admin-link": "node --env-file=.env.local scripts/admin-link.mjs",
+    "db:push": "supabase db push",
+    "config:push": "supabase config push",
+    "deploy": "bash scripts/deploy.sh"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@supabase/supabase-js": "^2.118.0",
+    "qrcode-generator": "^2.0.4",
+    "supabase": "^3.0.0-next.21"
+  },
+  "private": true
+}
